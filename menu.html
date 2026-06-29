@@ -3,132 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agave | Full Menu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Fajita Elite | Premium Menu</title>
     <style>
-        :root {
-            --primary-color: #d35400;
-            --dark-color: #1a1a1a;
-            --white: #ffffff;
-            --text-color: #333333;
+        :root { --primary: #ff4b4b; --white: #ffffff; --glass: rgba(0, 0, 0, 0.8); }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        
+        body { 
+            color: var(--white); 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed; 
+            background-size: cover;
         }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 10%; background: rgba(0,0,0,0.8); }
+        nav h2 { color: var(--primary); font-size: 1.8rem; text-decoration: none; }
+        nav div a { color: white; text-decoration: none; font-weight: bold; margin-left: 25px; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-        body { background-color: #fffdf9; color: var(--text-color); padding-bottom: 60px; }
+        .menu-header { text-align: center; margin: 3rem 0; font-size: 3rem; color: var(--primary); text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
 
-        /* Header شيك فيه زرار العودة */
-        header { background: var(--dark-color); padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .logo { font-size: 24px; font-weight: bold; color: var(--white); text-transform: uppercase; letter-spacing: 2px; text-decoration: none; }
-        .back-btn { color: var(--white); text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
-        .back-btn:hover { color: var(--primary-color); }
+        .menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; padding: 0 10% 4rem 10%; }
+        
+        /* الكروت الـ Advanced الشفافة */
+        .menu-card { 
+            background: var(--glass); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            border: 1px solid rgba(255,255,255,0.1); 
+            transition: 0.4s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .menu-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        
+        .menu-card img { width: 100%; height: 230px; object-fit: cover; }
+        
+        .menu-info { padding: 1.5rem; text-align: left; }
+        .menu-info h3 { font-size: 1.6rem; margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .menu-info h3 span { color: var(--primary); }
+        .menu-info p { color: #aaa; font-size: 0.95rem; line-height: 1.5; }
 
-        .menu-header { text-align: center; padding: 5px 20px; margin-top: 40px; }
-        .menu-header h1 { font-size: 3rem; color: var(--dark-color); }
-        .menu-header p { color: var(--primary-color); font-weight: 600; font-size: 1.2rem; margin-top: 10px; }
-
-        /* تقسيمات المنيو */
-        .menu-container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        .category-title { font-size: 2rem; color: var(--dark-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 30px; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; }
-
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .menu-item { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; border: 1px solid #eee; }
-        .item-img { height: 200px; background-size: cover; background-position: center; }
-        .item-details { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .item-title-price { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .item-title-price h3 { font-size: 1.3rem; color: var(--dark-color); }
-        .price { color: var(--primary-color); font-weight: bold; font-size: 1.2rem; }
-        .item-desc { color: #666; font-size: 0.95rem; }
-
-        footer { text-align: center; padding: 30px; background: var(--dark-color); color: #666; margin-top: 80px; }
+        footer { text-align: center; padding: 2rem; background: #000; color: #777; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">AGAVE</a>
-            <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    <nav>
+        <h2>FAJITA ELITE</h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="menu.html" style="color: var(--primary);">Menu</a>
         </div>
-    </header>
+    </nav>
 
-    <div class="menu-header">
-        <h1>Our Full Menu</h1>
-        <p>Crafted with Passion, Served with Love</p>
-    </div>
+    <h1 class="menu-header">Our Elite Menu</h1>
 
     <div class="menu-container">
-        
-        <!-- FIRST CATEGORY: APPETIZERS -->
-        <h2 class="category-title">Appetizers</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?q=80&w=500');"></div>
-                <div class="item-details">
-                    <div class="item-title-price">
-                        <h3>Tableside Guacamole</h3>
-                        <span class="price">$12.00</span>
-                    </div>
-                    <p class="item-desc">Fresh avocados, diced tomatoes, onions, cilantro, and fresh lime juice. Prepared right to your taste.</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1582231373663-aa21d17bc69a?q=80&w=500');"></div>
-                <div class="item-details">
-                    <div class="item-title-price">
-                        <h3>Agave Nachos</h3>
-                        <span class="price">$14.50</span>
-                    </div>
-                    <p class="item-desc">Crispy tortilla chips smothered in black beans, melted queso, jalapeños, and sour cream.</p>
-                </div>
+        <!-- وجبة 1 -->
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c7a5?auto=format&fit=crop&w=600&q=80" alt="Sizzling Chicken Fajita">
+            <div class="menu-info">
+                <h3>Sizzling Chicken <span>$18.50</span></h3>
+                <p>Tender grilled chicken breast strips, sautéed bell peppers, onions, and our signature smoked spice mix. Served with hot flour tortillas.</p>
             </div>
         </div>
 
-        <!-- SECOND CATEGORY: ENTRÉES -->
-        <h2 class="category-title">Entrées (Main Dishes)</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=500');"></div>
-                <div class="item-details">
-                    <div class="item-title-price">
-                        <h3>Street Tacos Trio</h3>
-                        <span class="price">$16.99</span>
-                    </div>
-                    <p class="item-desc">Three soft corn tortillas with your choice of Barbacoa, Carnitas, or Grilled Chicken, topped with cilantro and onions.</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=500');"></div>
-                <div class="item-details">
-                    <div class="item-title-price">
-                        <h3>Sizzling Fajitas</h3>
-                        <span class="price">$21.00</span>
-                    </div>
-                    <p class="item-desc">Served on a sizzling skillet with bell peppers and onions. Accompanied by rice, beans, and warm tortillas.</p>
-                </div>
+        <!-- وجبة 2 -->
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1529042223730-a8850616b3f5?auto=format&fit=crop&w=600&q=80" alt="Prime Beef Fajita">
+            <div class="menu-info">
+                <h3>Prime Beef Flank <span>$22.95</span></h3>
+                <p>Premium aged beef steak sliced right off the grill, combined with charred sweet onions and peppers. Absolute perfection.</p>
             </div>
         </div>
 
-        <!-- THIRD CATEGORY: DRINKS -->
-        <h2 class="category-title">Signature Drinks</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <div class="item-img" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=500');"></div>
-                <div class="item-details">
-                    <div class="item-title-price">
-                        <h3>Premium Margarita</h3>
-                        <span class="price">$11.00</span>
-                    </div>
-                    <p class="item-desc">Our house specialty made with 100% blue agave tequila, organic agave nectar, and fresh squeezed lime juice.</p>
-                </div>
+        <!-- وجبة 3 -->
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="The Elite Seafood Combo">
+            <div class="menu-info">
+                <h3>The Elite Combo <span>$34.00</span></h3>
+                <p>The ultimate mix of grilled chicken, prime beef, and garlic butter shrimp, topped with fresh guacamole and pico de gallo.</p>
             </div>
         </div>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 Agave Restaurant. All Rights Reserved.</p>
+        &copy; 2026 Fajita Elite. All Rights Reserved. Crafted by Nezar.
     </footer>
 
 </body>
